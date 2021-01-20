@@ -1,0 +1,219 @@
+/*************************************
+    PRESCRIZIONI GENERALI
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.shadow {
+  background-color: rgba(0,0,0,0.1);
+}
+
+/*************************************
+    STRUTTURA PAGINA
+*/
+body {
+  font-family: 'Abel', sans-serif;
+  color: ##3c3c3c;
+  /* font-family: "Courier New", sans-serif; */
+}
+.page {
+  width: 80%;
+  /* height: 100vh; */
+  margin: 15px auto;
+  /* background-color: lightgrey; */
+}
+
+/*************************************
+    INTESTAZIONE
+*/
+header {
+  /* position: fixed;
+  z-index: 9999;
+  width: 80%; */
+}
+
+/* logo */
+.logo {
+  height: 80px;
+  margin-bottom: 1px;
+  background-color: #d794d2;
+}
+.logo img {
+  width: 50%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* menu */
+.menu {
+  height: 40px;
+  margin-bottom: 15px;
+  background-color: #d794d2;
+}
+.menu ul {
+  list-style: none;
+}
+.menu ul li {
+  display: inline-block;
+  line-height: 40px; /* same as .menu height */
+}
+.menu a {
+  text-decoration: none;
+  color: #3c3c3c;
+  text-transform: uppercase;
+  padding: 0 12px;
+}
+
+/*************************************
+    CORPO
+*/
+main {
+  /* margin-top: 300px; */
+}
+
+/* slider */
+.slider {
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #e0d35a;
+}
+.slider_text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  /* background-color: rgba(0,0,0,0.1); */
+}
+.slider_title {
+  font-size: 2em;
+}
+.slider_subtitle {
+  font-style: italic;
+  font-size: 0.8em;
+
+}
+
+/*************************************
+    TITOLO E 3 COLONNE
+*/
+.content {
+  margin-bottom: 5px;
+  background-color: #0ba4cd;
+}
+
+/* titolo */
+.title {
+  height: 80px;
+  margin-bottom: 10px;
+  background-color: #6ecae3;
+}
+
+/* colonna */
+.col {
+  float: left;
+  height: 400px;
+  margin-bottom: 10px;
+  background-color: #6ecae3;
+}
+.col.left,
+.col.right {
+  width: 20%;
+  overflow: hidden;
+}
+.col.middle {
+  width: 58%;
+  margin: 0 1%;
+}
+.col img {
+  width: 100%;
+  height: 120px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.col_title {
+  font-weight: bold;
+  line-height: 2em;
+}
+.col_text {
+  font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************************
+    FOOTER
+*/
+footer {
+  height: 40px;
+  background-color: #d55fc1;
+}
+
+
+
+
+
+
+
+
+/*************************************
+    EXTRA
+*/
+div, footer {
+  position: relative;
+}
+header div[class]::before,
+main div[class]::before,
+footer::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-family: "Courier New", sans-serif;
+  text-align: center;
+  color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.1);
+}
+.logo:before {
+  content: "logo";
+}
+.menu:before {
+  content: "menu";
+}
+.slider:before {
+  content: "slider";
+}
+.title:before {
+  content: "title";
+}
+.col:before {
+  content: "column";
+}
+.menu:before {
+  content: "menu";
+}
+footer:before {
+  content: "footer";
+}
