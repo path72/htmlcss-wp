@@ -11,7 +11,13 @@
   display: table;
   clear: both;
 }
-.shadow {
+.shade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background-color: rgba(0,0,0,0.1);
 }
 
@@ -80,20 +86,24 @@ main {
 
 /* slider */
 .slider {
+  position: relative;
   height: 300px;
-  border-radius: 10px;
   margin-bottom: 15px;
-  background-color: #e0d35a;
+  border-radius: 10px;
+  /* background-color: #e0d35a; */
+  overflow: hidden;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .slider_text {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 40%;
-  border-radius: 10px;
-  padding: 20px;
   margin: 20px;
-  /* background-color: rgba(0,0,0,0.1); */
 }
 .slider_title {
   font-size: 2em;
@@ -101,7 +111,6 @@ main {
 .slider_subtitle {
   font-style: italic;
   font-size: 0.8em;
-
 }
 
 /*************************************
@@ -135,11 +144,15 @@ main {
   width: 58%;
   margin: 0 1%;
 }
+.col_image {
+  border-radius: 10px;
+  overflow: hidden;
+  /* border: 1px solid black; */
+}
 .col img {
   width: 100%;
-  height: 120px;
-  border: 1px solid black;
-  border-radius: 10px;
+  height: 150px;
+  object-fit: cover;
 }
 .col_title {
   font-weight: bold;
@@ -156,64 +169,10 @@ main {
 
 
 
-
-
-
-
 /*************************************
     FOOTER
 */
 footer {
   height: 40px;
   background-color: #d55fc1;
-}
-
-
-
-
-
-
-
-
-/*************************************
-    EXTRA
-*/
-div, footer {
-  position: relative;
-}
-header div[class]::before,
-main div[class]::before,
-footer::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  width: 70px;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-family: "Courier New", sans-serif;
-  text-align: center;
-  color: rgba(0,0,0,0.5);
-  background-color: rgba(0,0,0,0.1);
-}
-.logo:before {
-  content: "logo";
-}
-.menu:before {
-  content: "menu";
-}
-.slider:before {
-  content: "slider";
-}
-.title:before {
-  content: "title";
-}
-.col:before {
-  content: "column";
-}
-.menu:before {
-  content: "menu";
-}
-footer:before {
-  content: "footer";
 }
