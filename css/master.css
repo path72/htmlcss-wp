@@ -18,7 +18,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0,0,0,0.2);
 }
 
 /*************************************
@@ -47,21 +47,19 @@ header {
 
 /* logo */
 .logo {
-  height: 80px;
-  margin-bottom: 1px;
-  background-color: #d794d2;
+  height: 60px;
+  /* background-color: #d794d2; */
 }
 .logo img {
-  width: 50%;
   height: 100%;
-  vertical-align: middle;
+  /* vertical-align: middle; */
 }
 
 /* menu */
 .menu {
   height: 40px;
   margin-bottom: 15px;
-  background-color: #d794d2;
+  /* background-color: #d794d2; */
 }
 .menu ul {
   list-style: none;
@@ -69,12 +67,12 @@ header {
 .menu ul li {
   display: inline-block;
   line-height: 40px; /* same as .menu height */
+  padding: 0 10px;
 }
 .menu a {
   text-decoration: none;
   color: #3c3c3c;
   text-transform: uppercase;
-  padding: 0 12px;
 }
 
 /*************************************
@@ -86,12 +84,12 @@ main {
 
 /* slider */
 .slider {
-  position: relative;
+  position: relative; /*riferimento per .slider_text */
   height: 300px;
   margin-bottom: 15px;
   border-radius: 10px;
-  /* background-color: #e0d35a; */
   overflow: hidden;
+  /* background-color: #e0d35a; */
 }
 .slider img {
   width: 100%;
@@ -103,6 +101,7 @@ main {
   left: 0;
   bottom: 0;
   width: 40%;
+  color: white;
   margin: 20px;
 }
 .slider_title {
@@ -144,15 +143,13 @@ main {
   width: 58%;
   margin: 0 1%;
 }
-.col_image {
-  border-radius: 10px;
-  overflow: hidden;
-  /* border: 1px solid black; */
-}
 .col img {
   width: 100%;
   height: 150px;
+  border-radius: 10px;
   object-fit: cover;
+  /* overflow: hidden; */
+  /* border: 1px solid black; */
 }
 .col_title {
   font-weight: bold;
