@@ -126,7 +126,8 @@ body {
 /* colonna */
 .col {
   float: left;
-  height: 400px; /*TODO verificare altezza col dipendente da contenuto */
+  /* height: 400px;  */
+  /*TODO verificare altezza col dipendente da contenuto */
   margin-bottom: 10px;
   overflow: hidden;
   /* background-color: #6ecae3; */
