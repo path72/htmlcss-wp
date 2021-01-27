@@ -12,7 +12,13 @@
   clear: both;
 }
 .shade::before {
-  /* {tag =! img} AND {position =! static} */
+  /*
+    {tag =! img} AND {anteneato position =! static}
+    {tag =! img}:
+        img è un elemento vuoto! no chiusura => no ::before/::after
+    {position =! static}:
+        position: absolute => serve un antenato non static che definisce estensione
+  */
   content: "";
   position: absolute;
   top: 0;
@@ -45,12 +51,10 @@ body {
 }
 .logo img {
   height: 100%;
-  /* vertical-align: middle; */
 }
 
 /* menu */
 .menu {
-  /* height: 40px; lo prende da line-height di li */
   margin-bottom: 15px;
   /* background-color: #d794d2; */
 }
@@ -126,8 +130,6 @@ body {
 /* colonna */
 .col {
   float: left;
-  /* height: 400px;  */
-  /*TODO verificare altezza col dipendente da contenuto */
   margin-bottom: 10px;
   overflow: hidden;
   /* background-color: #6ecae3; */
@@ -140,7 +142,7 @@ body {
   width: 58%;
   margin: 0 1%;
 }
-.img_frame { /* area ombra immagine */
+.img_frame { /* estensione ombra immagine */
   position: relative;
   height: 150px;
   border-radius: 10px;
@@ -151,7 +153,6 @@ body {
   height: 150px;
   border-radius: 10px;
   object-fit: cover;
-  /* overflow: hidden; */
 }
 .col_title {
   font-weight: bold;
